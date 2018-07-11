@@ -5,10 +5,8 @@ import csv, os, glob, requests, textract
 from stopwords import stop
 import nltk
 from nltk.tokenize import word_tokenize
-from nltk.corpus import wordnet as wn
 
-# source = "devoir-source-des-pdf.csv"
-source = "devoir-source-des-pdf-post-verif.csv"
+source = "devoir-source-des-pdf.csv"
 
 entetes = {
 	"User-Agent":"Jean-Hugues Roy - requête transmise pour un projet de recherche avec les Cahiers du journalisme",
@@ -17,6 +15,7 @@ entetes = {
 
 fr = 0
 nonFr = 0
+nb = 0
 
 f1 = open(source)
 dates = csv.reader(f1)
@@ -43,10 +42,10 @@ for date in dates:
 
 	if len(nom) > 2:
 		code = nom[2].strip(".pdf")
-		outputCSV = "liste-mots/ledevoir-tokenize-{}{}{}_{}.csv".format(date[1][:4],date[1][5:7],date[1][8:10],code)
+		outputCSV = "liste-mots/ledevoir-token2-{}{}{}_{}.csv".format(date[1][:4],date[1][5:7],date[1][8:10],code)
 		outputTXT = "liste-mots/ledevoir-brut-{}{}{}_{}.txt".format(date[1][:4],date[1][5:7],date[1][8:10],code)
 	else:
-		outputCSV = "liste-mots/ledevoir-tokenize-{}{}{}.csv".format(date[1][:4],date[1][5:7],date[1][8:10])
+		outputCSV = "liste-mots/ledevoir-token2-{}{}{}.csv".format(date[1][:4],date[1][5:7],date[1][8:10])
 		outputTXT = "liste-mots/ledevoir-brut-{}{}{}.txt".format(date[1][:4],date[1][5:7],date[1][8:10])
 
 	print("On commence à créer les fichiers {} et {}".format(outputCSV,outputTXT))
@@ -59,9 +58,20 @@ for date in dates:
 
 	with open(outputTXT, "w") as duddle:
 		duddle.write(str(mots))
-
+	
+	debut = ""
+	x = 0
 	for mot in mots:
+		mot = debut + mot
+		if "\xad" in mot:
+			debut = mot.replace("\xad","")
+			x = 1
+			nb += 1
+		else:
+			debut = ""
+			x = 0
 		mot = mot.lower()
+		
 		if mot not in stop:
 			if mot.isalpha():
 				if len(mot) > 1:
@@ -73,10 +83,6 @@ for date in dates:
 					yang = csv.writer(ying)
 					yang.writerow(phrase)
 
-			# 	if not wn.synsets(mot, lang="fra"):
-			# 		nonFr += 1
-			# 	else:
-			# 		fr += 1
-
 	print("Il y avait {} mots dans le fichier {}".format(str(m),nomFichier))
-	# os.remove(nomFichier)
+	
+	os.remove("pdfs/{}".format(nomFichier))
