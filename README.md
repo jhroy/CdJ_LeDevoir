@@ -11,9 +11,10 @@ Toutes les éditions du *Devoir* entre le 1er janvier 1910 et le 31 décembre 20
 
 Cela fait près de 32 000 éditions sur plus de 50 000 fichiers accessibles en ligne (chaque cahier du journal est un fichier distinct). C'est beaucoup trop pour un seul article. J'ai choisi de ne prendre que les samedis. La première étape consistait donc à identifier tous les samedis depuis le 10 janvier 1910.
 
-On en a la liste dans le fichier [**devoir-samedis.csv**](devoir-samedis.csv).
+On en a la liste dans le fichier suivant&nbsp;:
+* [**devoir-samedis.csv**](devoir-samedis.csv).
 
-### Étape 2 - Extraire les fichiers
+### Étape 2 - Recourir à un API caché de BAnQ
 
 Une fois qu'on a les bonnes dates, il faut maintenant extraire les fichiers correspondants dans le site de BAnQ. Mais c'est un défi, car il n'y a aucun rapport entre la date de publication d'une édition donnée et son URL dans le site.
 
@@ -21,6 +22,11 @@ Par exemple, l'URL de l'édition du 1er mars 1985 est http://numerique.banq.qc.c
 
 Si on augmente ce nombre de 1 à **2790181**, on pourrait s'attendre à accéder à l'édition du 2 mars 1985. Eh non, on aboutit à [celle du 1er avril 1931](http://numerique.banq.qc.ca/patrimoine/details/52327/2790181). Poisson d'avril? Nenni.
 
-Il se trouve heureusement que BAnQ dispose d'un API pour ses collections. Cet outil (non documenté) permet de consulter les métadonnées d'un item de la collection de BAnQ. Par exemple, les métadonnées de l'édition du *Devoir* du 1er mars 1985 ressemblent [à ceci](http://collections.banq.qc.ca/api/service-notice?handle=52327/2790180) ([2790180.json](2790180.json)):
+Il se trouve heureusement que BAnQ dispose d'un API pour ses collections. Cet outil (non documenté) permet de consulter les métadonnées d'un item de la collection de BAnQ. Par exemple, les métadonnées de l'édition du *Devoir* du 1er mars 1985 ressemblent [à ceci](http://collections.banq.qc.ca/api/service-notice?handle=52327/2790180)&nbsp;:
+* [**2790180.json**](2790180.json)
 
-Pour trouver quelles dates correspondent à quels identifiants, il 
+Pour trouver quelles dates correspondent à quels identifiants, il faut aller à la pêche en essayant tous les identifiants possibles. C'est ce que fait l'un des premiers scripts programmés pour ce projet&nbsp;: 
+* [**devoir-api.py**](devoir-api.py)
+
+Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp;:
+* []()
