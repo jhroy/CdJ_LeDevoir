@@ -9,7 +9,7 @@ Méthodologie détaillée d'un article pour [*Les Cahiers du journalisme*](http:
 
 Toutes les éditions du *Devoir* entre le 1er janvier 1910 et le 31 décembre 2011 sont disponibles [dans la collection numérique du site web de Bibliothèque et Archives nationales Québec](http://numerique.banq.qc.ca/patrimoine/details/52327/2786824).
 
-Cela fait près de 32 000 éditions sur plus de 50 000 fichiers accessibles en ligne (chaque cahier du journal est un fichier distinct). C'est beaucoup trop pour un seul article. J'ai choisi de ne prendre que les samedis La première étape consistait donc à identifier tous les samedis depuis le 10 janvier 1910.
+Cela fait près de 32 000 éditions sur plus de 50 000 fichiers accessibles en ligne (chaque cahier du journal est un fichier distinct). C'est beaucoup trop pour un seul article. J'ai choisi de ne prendre que les samedis. La première étape consistait donc à identifier tous les samedis depuis le 10 janvier 1910.
 
 On en a la liste dans le fichier [**devoir-samedis.csv**](devoir-samedis.csv).
 
