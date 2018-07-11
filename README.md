@@ -28,5 +28,5 @@ Il se trouve heureusement que BAnQ dispose d'un API pour ses collections. Cet ou
 Pour trouver quelles dates correspondent à quels identifiants, il faut aller à la pêche en essayant tous les identifiants possibles. C'est ce que fait l'un des premiers scripts programmés pour ce projet&nbsp;: 
 * [**devoir-api.py**](devoir-api.py)
 
-Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp; (le fichier ci-dessous peut être utile à toute personne qui souhaiterait trouver rapidement les adresses web des 49&nbsp;672 fichiers compris dans les archives complètes duD *Devoir*:
+Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp; (le fichier ci-dessous peut être utile à toute personne qui souhaiterait trouver rapidement les adresses web des 49&nbsp;672 fichiers compris dans les archives complètes du *Devoir*:
 * [**devoir-api.csv**](devoir-api.csv)
