@@ -3,6 +3,8 @@
 # Un siècle de culture au *Devoir*
 Méthodologie détaillée d'un article pour [*Les Cahiers du journalisme*](http://cahiersdujournalisme.org/) (revue évaluée par les pairs).
 
+:pencil2: :pencil2: :pencil2:
+
 ### Étape 1 - Trouver les samedis
 
 <img src="http://numerique.banq.qc.ca/images/signature/logoBAnQ_EnteteMob.png" width="100">
@@ -30,3 +32,11 @@ Pour trouver quelles dates correspondent à quels identifiants, il faut aller à
 
 Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp; (le fichier ci-dessous peut être utile à toute personne qui souhaiterait trouver rapidement les adresses web des 49&nbsp;672 fichiers compris dans les archives complètes du *Devoir*:
 * [**devoir-api.csv**](devoir-api.csv)
+
+Une fois qu'on a trié uniquement les éditions du samedi, on se retrouve avec ce fichier qui va nous servir à l'étape suivante&nbsp;:
+* [**devoir-source-des-pdf.csv**](devoir-source-des-pdf.csv)
+
+### Étape 3 - Extraire les fichiers
+
+Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;754 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois choses:
+* 
