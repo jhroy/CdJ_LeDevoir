@@ -3,7 +3,7 @@
 
 import csv, requests, json
 
-fich = "devoir-api-2.csv"
+fich = "devoir-api.csv"
 
 n=0
 for x in range(2806457,2930478):
