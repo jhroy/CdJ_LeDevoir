@@ -14,8 +14,10 @@ for x in range(2806457,2930478):
 		"User-Agent":"Jean-Hugues Roy - requête transmise pour un projet de recherche avec les Cahiers du journalisme",
 		"From":"roy.jean-hugues@uqam.ca"
 	}
+	
 	url = "http://collections.banq.qc.ca/api/service-notice?handle=52327/{}".format(x)
 	req = requests.get(url,headers=entetes)
+	
 	print(req.status_code)
 
 	if req.status_code == 200:
