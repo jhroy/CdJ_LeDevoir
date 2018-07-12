@@ -150,7 +150,7 @@ briller,10,7,VER:ppre,2
 brochure,6,8,NOM,1
 brouiller,3,9,VER:pper,2
 brouillon,3,9,ADJ,1
-bruir|bruire,9,12,VER:pres,2
+bruire,9,12,VER:pres,2
 brun,5,4,ADJ,3
 bye,4,3,INT,3
 cabotinage,1,10,NOM,3
@@ -439,7 +439,7 @@ electronique,2,12,ADJ,2
 élitiste,1,8,ADJ,2
 éloge,11,5,NOM,3
 élogieux,1,8,ADJ,2
-émail|émaux,2,11,NOM,1
+émail,2,11,NOM,1
 embrasser,3,9,VER:pres,1
 émergent,2,8,ADJ,2
 émerveillement,3,14,NOM,3
@@ -514,7 +514,7 @@ esthétique,17,10,ADJ,2
 étonner,28,7,VER:infi,3
 étouffant,3,9,ADJ,1
 étourdissant,2,12,ADJ,1
-être|êtres,11,10,NOM,1
+être,11,10,NOM,1
 éveiller,5,8,VER:pres,2
 événement,40,9,NOM,2
 événementiel,1,12,ADJ,2
@@ -561,7 +561,7 @@ fantastique,13,11,ADJ,2
 farce,4,5,ADJ,2
 fasciner,14,8,VER:pper,3
 fashion,5,7,NOM,2
-fau|faux,4,8,NOM,1
+faux,4,8,NOM,1
 fée,3,3,NOM,3
 féérique,1,8,VER:pres,3
 félicitation,1,12,NOM,1
@@ -585,10 +585,11 @@ flamboyant,3,10,ADJ,1
 florilège,2,9,NOM,2
 flou,9,4,ADJ,1
 folie,20,5,NOM,1
-folle|fou,14,9,ADJ,1
-fond|fonds,6,10,NOM,1
+folle,14,9,ADJ,1
+fou,14,9,ADJ,1
+fonds,6,10,NOM,1
 fonder,18,6,VER:pper,1
-fonder|fondre,4,13,VER:impf,2
+fonder,4,13,VER:impf,2
 format,22,6,NOM,2
 forme,56,5,NOM,1
 formidable,4,10,ADJ,1
@@ -631,7 +632,7 @@ graphisme,2,9,NOM,3
 grégorien,8,9,ADJ,3
 gris,13,4,ADJ,1
 groupe,80,6,NOM,2
-guide|guides,3,12,NOM,1
+guide,3,12,NOM,1
 habileté,2,8,NOM,1
 hall,23,4,NOM,2
 halluciner,3,10,VER:pper,3
@@ -639,7 +640,7 @@ hanter,5,6,VER:pres,1
 harmonieux,6,10,ADJ,1
 hauteur,6,7,NOM,1
 hebdomadaire,3,12,ADJ,1
-héro|héros,24,10,NOM,3
+héros,24,10,NOM,3
 héroïque,5,8,ADJ,2
 heure,120,5,NOM,1
 heureusement,9,12,ADV,1
@@ -810,7 +811,6 @@ linéaire,3,8,ADJ,1
 linguistique,7,12,ADJ,1
 lion,10,4,NOM,1
 lire,124,4,VER:pper,3
-lire|liser,15,10,VER:pres,3
 lisibilité,3,10,NOM,1
 lisible,2,7,ADJ,1
 littéralement,4,13,ADV,1
@@ -881,7 +881,7 @@ moderniste,1,10,ADJ,1
 modernité,6,9,NOM,1
 modeste,6,7,ADJ,1
 mœurs,10,5,NOM,3
-mol|mou,3,7,ADJ,1
+mou,3,7,ADJ,1
 monstre,6,7,ADJ,1
 montrer,64,7,VER:infi,3
 monument,16,8,NOM,3
@@ -906,7 +906,7 @@ négliger,7,8,VER:pper,1
 néologisme,3,10,NOM,2
 névrose,7,7,NOM,1
 noir,,,ADJ,2
-noir|noire,4,10,NOM,1
+noire,4,10,NOM,1
 nostalgie,8,9,NOM,1
 nostalgique,3,11,ADJ,1
 note,25,4,NOM,3
@@ -943,7 +943,7 @@ ours,4,4,NOM,1
 ouverture,29,9,NOM,1
 ouvrage,94,7,NOM,1
 ouvrages,5,8,VER:pres,3
-ouvrer|ouvrir,12,13,VER:pres,2
+ouvrer,12,13,VER:pres,2
 ouvrir,9,6,VER:futu,3
 pager,77,5,VER:pres,3
 palace,21,6,NOM,1
@@ -1015,7 +1015,7 @@ plan,45,4,ADJ,1
 plastique,12,9,ADJ,2
 plateformes,1,11,ADJ,1
 plénitude,3,9,NOM,1
-pleur|pleurs,3,12,NOM,1
+pleurs,3,12,NOM,1
 pleurer,7,7,VER:impf,3
 plumer,9,6,VER:pres,2
 poche,2,5,NOM,1
@@ -1146,7 +1146,7 @@ regard,48,6,NOM,1
 regarder,36,8,VER:pres,1
 registre,5,8,NOM,1
 registrer,6,9,VER:pper,2
-règle|règles,11,12,NOM,1
+règles,11,12,NOM,1
 regrouper,12,9,VER:infi,2
 réinventer,6,10,VER:pper,3
 relater,15,7,VER:impf,3

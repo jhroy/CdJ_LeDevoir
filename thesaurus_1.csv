@@ -10,7 +10,8 @@ acrylique,5,9,ADJ,5
 acte,23,4,NOM,5
 acter,8,5,VER:pres,5
 acteur,53,6,NOM,4
-acteur|actrice,11,14,NOM,5
+acteur,11,14,NOM,5
+actrice,11,14,NOM,5
 actra,4,5,NOM,5
 adagio,3,6,ADV,5
 adaptation,16,10,NOM,5
@@ -163,7 +164,7 @@ contrebassiste,2,14,NOM,5
 coprésentation,1,14,NOM,5
 coproduction,2,12,NOM,5
 copyright,3,9,NOM,5
-cor|cors,2,8,NOM,5
+cor,2,8,NOM,5
 corbusier,5,9,NOM,5
 corneille,3,9,NOM,5
 corniste,2,8,NOM,5
@@ -470,7 +471,6 @@ partition,9,9,NOM,5
 parution,17,8,NOM,5
 pbs,4,3,NOM,5
 pda,10,3,VER:simp,5
-peigner|peindre,1,15,VER:ppre,4
 peindre,33,7,VER:infi,5
 peintre,45,7,NOM,5
 peinture,54,8,VER:pres,5
@@ -725,7 +725,7 @@ vaudeville,3,10,NOM,5
 vaudevillesque,1,14,ADJ,5
 vedette,44,7,NOM,5
 venise,7,6,NOM,5
-vêpre|vêpres,2,12,NOM,4
+vêpres,2,12,NOM,4
 verlaine,2,8,ADJ,5
 vernissage,9,10,NOM,5
 vibraphoniste,2,13,NOM,5
