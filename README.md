@@ -50,3 +50,5 @@ Voici la liste des mots-vides utilisés&nbsp;:
 
 ### Étape 4 - Lemmatisation
 
+À partir des fichiers CSV des unités lexicales débarrassées des mots vides, l'étape suivante a consisté à effectuer une [lemmatisation](https://fr.wikipedia.org/wiki/Lemmatisation), c'est-à-dire une réduction des noms et adjectif à leur forme canonique (tous les pluriels au singulier, et les féminins au masculin) et des verbes à leur infinitif. Cette opération a été effectuée grâce à l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) à l'aide d'un script bash tout simple:
+* [**treetagger.sh**](treetagger.sh)
