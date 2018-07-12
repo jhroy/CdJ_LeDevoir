@@ -20,9 +20,9 @@ On en a la liste dans le fichier suivant&nbsp;:
 
 Une fois qu'on a les bonnes dates, il faut maintenant extraire les fichiers correspondants dans le site de BAnQ. Mais c'est un défi, car il n'y a aucun rapport entre la date de publication d'une édition donnée et son URL dans le site.
 
-Par exemple, l'URL de l'édition du 1er mars 1985 est http://numerique.banq.qc.ca/patrimoine/details/52327/2790180. L'identifiant unique de cette édition est **2790180**.
+Par exemple, l'URL de l'édition du 1er mars 1985 est http://numerique.banq.qc.ca/patrimoine/details/52327/2790180. L'identifiant unique de cette édition est la dernière partie de son URL, soit **2790180**. Rien, dans ce nombre, ne permet de reconnaître le 1er mars 1985.
 
-Si on augmente ce nombre de 1 à **2790181**, on pourrait s'attendre à accéder à l'édition du 2 mars 1985. Eh non, on aboutit à [celle du 1er avril 1931](http://numerique.banq.qc.ca/patrimoine/details/52327/2790181). Poisson d'avril? Nenni.
+En outre, si on augmente ce nombre de 1 à **2790181**, on pourrait s'attendre à accéder à l'édition du 2 mars 1985. Eh non, on aboutit à [celle du 1er avril 1931](http://numerique.banq.qc.ca/patrimoine/details/52327/2790181). Problème.
 
 Il se trouve heureusement que BAnQ dispose d'un API pour ses collections. Cet outil (non documenté) permet de consulter les métadonnées d'un item de la collection de BAnQ. Par exemple, les métadonnées de l'édition du *Devoir* du 1er mars 1985 ressemblent [à ceci](http://collections.banq.qc.ca/api/service-notice?handle=52327/2790180)&nbsp;:
 * [**2790180.json**](2790180.json)
@@ -38,5 +38,12 @@ Une fois qu'on a trié uniquement les éditions du samedi, on se retrouve avec c
 
 ### Étape 3 - Extraire les fichiers
 
-Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;754 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois choses:
-* 
+Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;754 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois chosesnbsp;:
+* il extrait le texte du PDF à l'aide de la bibliothèque [textract](https://github.com/deanmalmgren/textract);
+* il sépare ce texte en [entités lexicales](https://fr.wikipedia.org/wiki/Analyse_lexicale), ou *tokens*, à l'aide de la bibliothèque [NLTK (Natural Language Toolkit)](https://www.nltk.org/) et les sauvegarde dans un fichier texte;
+* il effectue ensuite un tri dans ces *tokens* afin d'exclure les [**mots vides**](https://fr.wikipedia.org/wiki/Mot_vide) et de ne conserver que les mots de deux caractères ou plus, puis il sauvegarde ces mots dans un fichier CSV.
+
+* [**devoir-extraction.py**](devoir-extraction.py)
+
+Voici la liste des mots-vides utilisés&nbsp;:
+* [**stopwords.py**](stopwords.py) -> il s'agit en fait d'un fichier python ne définissant qu'une liste appelée `stop` contenant ces mots vides; le fichier est invoqué au début du script ci-dessus par la mention `from stopwords import stop`
