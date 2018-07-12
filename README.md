@@ -52,4 +52,29 @@ Une lemmatisation du corpus a également été effectuée grâce à l'outil [Tre
 
 ### Étape 4 - Confection de deux thésaurus
 
-Une fois le corpus constitué, il fallait, pour l
+L'objectif central de cette analyse était de mesurer la place de la culture dans les pages du *Devoir* au fil des ans. Pour y arriver, il fallait constituer deux thésaurus de mots relatifs à la culture. À partir d'une sélection aléatoire de textes puisés dans 34 éditions ([**thesaurus_sources.csv**](thesaurus_sources.csv)), deux thésaurus ont été confectionnés.
+
+* [**thesaurus_1.csv**](thesaurus_1.csv) -> ce premier thésaurus comprend 760 mots directement reliés à la culture; chacun comprend une «cote» de 5 ou de 4 points.
+* [**thesaurus_2.csv**](thesaurus_2.csv) -> ce deuxième thésaurus comprend 1439 mots qui, même s'ils ne sont pas directement reliés à la culture, peuvent dénoter qu'on se trouve dans un contexte culturel si des mots du premier thésaurus sont présents tout près; chacun comprend également une «cote» de 1, 2 ou 3 points.
+
+### Étape 5 - Analyse du corpus
+
+Une fois les thésaurus confectionnés, un dernier script s'en sert afin de réaliser l'analyse finale de notre corpus&nbsp;:
+
+* [**devoir-indice.py**](devoir-indice.py)
+
+Ce script «scanne» l'ensemble du corpus par blocs de *x* mots, *x* étant un nombre défini par l'utilisateur. Pour chaque bloc de mots, le script regarde d'abord si un mot du premier thésaurus est présent. Si c'est le cas, il vérifie également si un mot du second thésaurus est présent. C'est seulement si des mots des deux corpus sont présents qu'un «indice» (un nombre calculé à partir des «cotes» de chacun des mots présents) est donné à ce bloc de texte et ajouté à un indice global pour cette édition.
+
+Pour les besoins de cette analyse pour *Les Cahiers du journalisme*, quatre «scans» ont été effectués sur chacune des 10&nbsp;753 éditions&nbsp;: par blocs de 5 mots, par blocs de 10 mots, par blocs de 15 mots et par blocs de 20 mots. Une moyenne de ces quatre indices a été calculée, puis divisée par le nombre total de mots dans l'édition pour former un indice pondéré de culture pour cette édition. L'information a été enregistrée dans un fichier CSV&nbsp;:
+
+* []()
+
+Cette information a ensuite été synthétisée par année&nbsp;:
+
+* []()
+
+C'est ce dernier fichier qui a été la source du graphique produit pour *Les Cahiers du journalisme*.
+
+<img src="">
+
+###### (Les deux derniers fichiers CSV et le graphique final ne seront partagés dans ce répertoire que lorsque l'article sera publié)
