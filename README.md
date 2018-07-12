@@ -50,5 +50,7 @@ Voici la liste des mots-vides utilisés&nbsp;:
 
 ### Étape 4 - Lemmatisation
 
-À partir des fichiers CSV des unités lexicales débarrassées des mots vides, l'étape suivante a consisté à effectuer une [lemmatisation](https://fr.wikipedia.org/wiki/Lemmatisation), c'est-à-dire une réduction des noms et adjectif à leur forme canonique (tous les pluriels au singulier, et les féminins au masculin) et des verbes à leur infinitif. Cette opération a été effectuée grâce à l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) à l'aide d'un script bash tout simple:
+À partir des fichiers CSV des unités lexicales débarrassées des mots vides, l'étape suivante a consisté à effectuer une [lemmatisation](https://fr.wikipedia.org/wiki/Lemmatisation), c'est-à-dire une réduction des noms et adjectifs à leur forme canonique (tous les pluriels au singulier, et les féminins au masculin), ainsi que des verbes à leur infinitif. Cette opération a été effectuée grâce à l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) à l'aide d'un script bash tout simple:
 * [**treetagger.sh**](treetagger.sh)
+
+TreeTagger est intéressant, parce qu'il classe également chaque mot dans une catégorie morphosyntaxique (nom, verbe, adverbe, etc.). Le résultat de ce script est une série de 10&nbsp;753 fichiers textes (dont voici un exemple: [**ledevoir-lemmas-19940910_F.txt**](ledevoir-lemmas-19940910_F.txt)) , qui ont été transformés en CSV ([**ledevoir-token2-19921212_D.csv**](ledevoir-token2-19921212_D.csv)) à l'aide d'un script python qu'il ne vaut pas la peine de recopier.
