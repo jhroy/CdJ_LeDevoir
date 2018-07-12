@@ -38,10 +38,10 @@ Une fois qu'on a trié uniquement les éditions du samedi, on se retrouve avec c
 
 ### Étape 3 - Extraire les fichiers
 
-Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;754 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois chosesnbsp;:
+Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;753 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois chosesnbsp;:
 * il extrait le texte du PDF à l'aide de la bibliothèque [textract](https://github.com/deanmalmgren/textract);
-* il sépare ce texte en [entités lexicales](https://fr.wikipedia.org/wiki/Analyse_lexicale), ou *tokens*, à l'aide de la bibliothèque [NLTK (Natural Language Toolkit)](https://www.nltk.org/) et les sauvegarde dans un fichier texte;
-* il effectue ensuite un tri dans ces *tokens* afin d'exclure les [**mots vides**](https://fr.wikipedia.org/wiki/Mot_vide) et de ne conserver que les mots de deux caractères ou plus, puis il sauvegarde ces mots dans un fichier CSV.
+* il sépare ce texte en [entités lexicales](https://fr.wikipedia.org/wiki/Analyse_lexicale), ou *tokens*, à l'aide de la bibliothèque [NLTK (Natural Language Toolkit)](https://www.nltk.org/) et les sauvegarde dans un fichier texte (le script en produit 10&nbsp;753 alors ils ne sont pas tous recopiés ici, mais en voici un exemple: [**ledevoir-brut-19660219.txt**](ledevoir-brut-19660219.txt);
+* il effectue ensuite un tri dans ces *tokens* afin d'exclure les [**mots vides**](https://fr.wikipedia.org/wiki/Mot_vide) et de ne conserver que les mots de deux caractères ou plus, puis il sauvegarde ces mots dans un fichier CSV (il y en a tout autant; en voici un exemple: [**ledevoir-token2-19921212_D.csv**](ledevoir-token2-19921212_D.csv).
 
 * [**devoir-extraction.py**](devoir-extraction.py)
 
