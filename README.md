@@ -48,9 +48,8 @@ Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour t�
 Voici la liste des mots-vides utilisés&nbsp;:
 * [**stopwords.py**](stopwords.py) -> il s'agit en fait d'un fichier python ne définissant qu'une liste appelée `stop` contenant ces mots vides; le fichier est invoqué au début du script ci-dessus par la mention `from stopwords import stop`. Elle est inspirée de [cette collection](https://github.com/stopwords-iso/stopwords-fr).
 
-### Étape 4 - Lemmatisation
+Une lemmatisation du corpus a également été effectuée grâce à l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/). Mais parce que cet outil effaçait plusieurs noms propres, des mots importants si le sujet de l'analyse est la culture, la lemmatisation n'a finalement pas été retenue.
 
-À partir des fichiers CSV des unités lexicales débarrassées des mots vides, l'étape suivante a consisté à effectuer une [lemmatisation](https://fr.wikipedia.org/wiki/Lemmatisation), c'est-à-dire une réduction des noms et adjectifs à leur forme canonique (tous les pluriels au singulier, et les féminins au masculin), ainsi que des verbes à leur infinitif. Cette opération a été effectuée grâce à l'outil [TreeTagger](http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/) à l'aide d'un script bash tout simple:
-* [**treetagger.sh**](treetagger.sh)
+### Étape 4 - Confection de deux thésaurus
 
-TreeTagger est intéressant, parce qu'il classe également chaque mot dans une catégorie morphosyntaxique (nom, verbe, adverbe, etc.). Le résultat de ce script est une série de 10&nbsp;753 fichiers textes (dont voici un exemple: [**ledevoir-lemmas-19940910_F.txt**](ledevoir-lemmas-19940910_F.txt)) , qui ont été transformés en CSV ([**ledevoir-token2-19921212_D.csv**](ledevoir-token2-19921212_D.csv)) à l'aide d'un script python qu'il ne vaut pas la peine de recopier.
+Une fois le corpus constitué, il fallait, pour l
