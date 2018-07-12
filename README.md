@@ -30,7 +30,7 @@ Il se trouve heureusement que BAnQ dispose d'un API pour ses collections. Cet ou
 Pour trouver quelles dates correspondent à quels identifiants, il faut aller à la pêche en essayant tous les identifiants possibles. C'est ce que fait l'un des premiers scripts programmés pour ce projet&nbsp;: 
 * [**devoir-api.py**](devoir-api.py)
 
-Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp; (le fichier ci-dessous peut être utile à toute personne qui souhaiterait trouver rapidement les adresses web des 49&nbsp;672 fichiers compris dans les archives complètes du *Devoir*:
+Il vérifie tous les identifiants dans une fourchette donnée et si l'API nous dit que cet identifiant mène à une édition du devoir, on l'inscrit dans un fichier CSV&nbsp; (le fichier ci-dessous peut être utile à toute personne qui souhaiterait trouver rapidement les adresses web des 49&nbsp;672 fichiers compris dans les archives complètes du *Devoir* et pesant, ensemble, près de 606,5 gigaoctets&nbsp;:
 * [**devoir-api.csv**](devoir-api.csv)
 
 Une fois qu'on a trié uniquement les éditions du samedi, on se retrouve avec ce fichier qui va nous servir à l'étape suivante&nbsp;:
@@ -40,7 +40,7 @@ Une fois qu'on a trié uniquement les éditions du samedi, on se retrouve avec c
 
 Le script ci-dessous puise dans le fichier **devoir-source-des-pdf.csv** pour télécharger les 10&nbsp;753 fichiers PDF des éditions du samedi auxquelles on s'intéresse. Une fois chaque fichier téléchargé, il fait trois chosesnbsp;:
 * il extrait le texte du PDF à l'aide de la bibliothèque [textract](https://github.com/deanmalmgren/textract);
-* il sépare ce texte en [entités lexicales](https://fr.wikipedia.org/wiki/Analyse_lexicale), ou *tokens*, à l'aide de la bibliothèque [NLTK (Natural Language Toolkit)](https://www.nltk.org/) et les sauvegarde dans un fichier texte (le script en produit 10&nbsp;753 alors ils ne sont pas tous recopiés ici, mais en voici un exemple: [**ledevoir-brut-19660219.txt**](ledevoir-brut-19660219.txt));
+* il sépare ce texte en [entités lexicales](https://fr.wikipedia.org/wiki/Analyse_lexicale), ou *tokens*, à l'aide de la bibliothèque [NLTK (Natural Language Toolkit)](https://www.nltk.org/) et les sauvegarde dans un fichier texte (le script en produit 10&nbsp;753 contenant un grand total de **4,1 milliards** d'entités, alors ils ne sont pas tous recopiés ici, mais en voici un exemple: [**ledevoir-brut-19660219.txt**](ledevoir-brut-19660219.txt));
 * il effectue ensuite un tri dans ces *tokens* afin d'exclure les [**mots vides**](https://fr.wikipedia.org/wiki/Mot_vide) et de ne conserver que les mots de deux caractères ou plus, puis il sauvegarde ces mots dans un fichier CSV (il y en a tout autant; en voici un exemple: [**ledevoir-token2-19921212_D.csv**](ledevoir-token2-19921212_D.csv)).
 
 * [**devoir-extraction.py**](devoir-extraction.py)
