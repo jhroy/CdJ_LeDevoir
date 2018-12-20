@@ -67,14 +67,12 @@ Ce script «scanne» l'ensemble du corpus par blocs de *x* mots, *x* étant un n
 
 Pour les besoins de cette analyse pour *Les Cahiers du journalisme*, quatre «scans» ont été effectués sur chacune des 10&nbsp;753 éditions&nbsp;: par blocs de 5 mots, par blocs de 10 mots, par blocs de 15 mots et par blocs de 20 mots. Une moyenne de ces quatre indices a été calculée, puis divisée par le nombre total de mots dans l'édition pour former un indice pondéré de culture pour cette édition. L'information a été enregistrée dans un fichier CSV&nbsp;:
 
-* []()
+* [**devoir-indice-par-edition.csv**](devoir-indice-par-edition.csv)
 
 Cette information a ensuite été synthétisée par année&nbsp;:
 
-* []()
+* [**devoir-indice-par-annee.csv**](devoir-indice-par-annee.csv)
 
 C'est ce dernier fichier qui a été la source du graphique produit pour *Les Cahiers du journalisme*.
 
-<img src="">
-
-###### (Les deux derniers fichiers CSV et le graphique final ne seront partagés dans ce répertoire que lorsque l'article sera publié)
+<img src="Indice culture.png">
