@@ -1,7 +1,7 @@
 <img src="LogoLeDevoir.png" alt="Logo du Devoir" width="500" height="105" style="display:block;margin-left:auto;margin-right:auto;">
 
 # Un siècle de culture au *Devoir*
-Méthodologie détaillée d'un article pour [*Les Cahiers du journalisme*](http://cahiersdujournalisme.org/) (revue évaluée par les pairs) sur la place de la culture dans les pages du journal entre 1910 et 2011.
+Méthodologie détaillée d'un [article](http://cahiersdujournalisme.org/V2N2/CaJ-2.2-R009.html) pour [*Les Cahiers du journalisme*](http://cahiersdujournalisme.org/) (revue évaluée par les pairs) sur la place de la culture dans les pages du journal entre 1910 et 2011.
 
 :pencil2: :pencil2: :pencil2:
 
